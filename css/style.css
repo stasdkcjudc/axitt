@@ -1,0 +1,388 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Light.woff2);
+    font-weight: 200; 
+ }
+ 
+ @font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.woff2);
+     font-weight: normal; /* 400 */
+ }
+ 
+ @font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Bold.woff2);
+    font-weight: bold; /* 900 */
+ }
+ 
+ :root {
+    --color-accent: #FF8B38;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #acaaaa;
+    --color-dark: #c9c9c9;
+ }
+    
+ 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: OpenSans;
+ }
+ 
+ a{
+    text-decoration: none;
+ }
+ 
+ ul{
+    list-style-type: none;
+ }
+ 
+ h4{
+    text-transform: capitalize;
+    font-size: 140%;
+ }
+ 
+ 
+ .button{
+    padding: 10px 30px;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0);
+    text-transform: capitalize;
+    font-size: 120%;
+    transition: all 0.7s;
+ }
+ 
+ .button:hover{
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+ 
+ }
+ .burger{
+    width: 36px;
+    justify-self: end;
+    cursor: pointer;
+    display: none;
+ }
+ 
+ .burger svg{
+    color: var(--color-white);
+ }
+ 
+ .modalMenu{
+    background-color: #616161e1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+ }
+ .modalMenu.active{
+    display: block;
+ }
+ 
+ .modalMenu header{
+    display: grid;
+    grid-template-columns: 36px;
+    grid-template-rows: 36px;
+    background-color: #616161;
+    justify-content: end;
+ }
+ 
+ .modalMenu header svg{
+    cursor: pointer;
+    color: var(--color-accent);
+ }
+ 
+ .modalMenu nav ul{
+    display: grid;
+    row-gap: 20px;
+    justify-items: center;
+ }
+ 
+ .modalMenu nav ul li a{
+    color: var(--color-white);
+    font-size: 200%;
+    transition: all 0.7s;
+    display: block;
+ }
+ 
+ .modalMenu nav ul li a:hover{
+    color: var(--color-accent);
+    transform: scale(1.2);
+ }
+ 
+ 
+ header, main section {
+    padding: 10px 10%;
+ }
+ 
+ main section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+ }
+ 
+ header{
+    background-color: var(--color-black);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: start;
+ }
+ 
+ header .logo{
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 200%;
+ }
+ 
+ header .logo span{
+    font-weight: 200;
+    color: var(--color-accent);
+ }
+ 
+ header nav{
+    justify-self: end;
+ }
+ 
+ header nav ul{
+    display: flex;
+    column-gap: 30px;
+    
+ }
+ 
+ header nav ul li a{
+    color: var(--color-gray);
+    transition: all 0.7s;
+ }
+ 
+ header nav ul li a:hover, header nav ul li a.active{
+    color: var(--color-accent);
+ }
+ 
+ main section.modern{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    color: var(--color-white);
+    background-image: linear-gradient(
+       to right,
+       rgb(0 0 0 / 90%),
+       rgb(0 0 0 / 20%)
+     ), url(../images/198735671-colorful-paint-splashing-on-colorful-background.-3d-render-illustration.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+ 
+ main section.modern div.left{
+    display: grid;
+    justify-items: start;
+    row-gap: 30px;
+    padding-right: 30vw;
+ }
+ 
+ main section.modern div.left h1{
+    text-transform: uppercase;
+    font-size: 400%;
+ }
+ 
+ main section.modern div.left div{
+    line-height: 1.2;
+ }
+ 
+ main section.modern div.left h1 span{
+    color: var(--color-accent);
+    font-weight: 200;
+ }
+ 
+ main section.modern div.left h2{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 200%;
+ }
+ 
+ main section.modern div.left hr{
+    width: 8vw;
+    align-self: start;
+ }
+ 
+ main section.modern div.left p{
+    color: var(--color-dark);
+    font-weight: 200;
+ }
+ 
+ main section.modern div.right form{
+    background-color: var(--color-white);
+    border-radius: 6px;
+    display: grid;
+    grid-template-rows: repeat(5, 60px);
+    row-gap: 20px;
+ }
+ 
+ main section.modern div.right form h3{
+    color: var(--color-black);
+    text-transform: capitalize;
+    background-color: var(--color-gray);
+    text-align: center;
+    padding: 20px;
+    border-radius: 6px 6px 0 0;
+ }
+ main section.modern div.right form h3 span{
+    color: var(--color-accent);
+ }
+ 
+ main section.modern div.right form input{
+    border: 0;
+    border-bottom: 1px solid var(--color-gray);
+    margin: 0 2vw;
+ }
+ 
+ main section.modern div.right form input[type=submit]{
+    margin: 0;
+    border: 0;
+    border-radius: 0 0 6px 6px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    text-transform: capitalize;
+    font-size: 110%;
+ }
+ 
+ main section.icons{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 40px;
+    align-items: center;
+ }
+ main section.icons div.left{
+    display: grid;
+    row-gap: 20px;
+ }
+ 
+ main section.icons p{
+    font-weight: 200;
+ }
+ 
+ main section.icons ul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 60px;
+    column-gap: 20px;
+ }
+ 
+ main section.icons ul li{
+    display: none;
+ }
+ 
+ main section.icons ul li.active{
+    display: block;
+    color: var(--color-gray);
+ }
+ 
+ main section.icons ul li svg{
+    width: 100%;
+    height: 100%;
+ }
+ 
+ main section.tabs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background-color: var(--color-dark);
+ }
+ 
+ main section.tabs div.left{
+    display: grid;
+    row-gap: 40px;
+ }
+ 
+ main section.tabs div.left ul:nth-child(1){
+    display: grid;
+    grid-template-columns: repeat(3,80px);
+    column-gap: 4px;
+    }
+ 
+ main section.tabs div.left ul:nth-child(1) li{
+    text-transform: uppercase;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+ }
+ 
+ main section.tabs div.left ul:nth-child(1) li.active{
+    background-color: var(--color-accent);
+ }
+ 
+ main section.tabs div.left ul:nth-child(2) li{
+    row-gap: 20px;
+    display: none;
+ }
+ 
+ main section.tabs div.right{
+    display: grid;
+    grid-template-columns: 320px;
+    grid-template-rows: 170px 170px;
+    justify-content: center;
+    align-content: center;
+ }
+ 
+ main section.tabs div.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ 
+ main section.tabs div.right img:nth-child(2){
+    transform: rotateX(180deg);
+    opacity: 0.4;
+ }
+ 
+ 
+ main section.tabs div.left ul:nth-child(2) li.active{
+    display: grid;
+ }
+ 
+ main section.tabs div.left ul:nth-child(2) li div{
+    display: grid;
+    row-gap: 10px;
+ }
+ 
+ @media screen and (max-width: 1360px){
+    main section.modern{
+       grid-template-columns: 2fr 1fr;
+ 
+    }
+ }
+ 
+ @media screen and (max-width: 1060px){
+    main section.modern{
+       grid-template-columns: 1fr;
+       row-gap: 40px;
+    }
+    main section.modern div.left{
+       padding: 0;
+    }
+ 
+    header nav{
+       display: none;
+    }
+ 
+    .burger{
+       display: block;
+    }
+    main section.icons{
+       grid-template-columns: 1fr;
+       row-gap: 40px;
+    }
+ 
+    main section.tabs{
+       grid-template-columns: 1fr;
+       row-gap: 40px;
+    }
+    
+ }
